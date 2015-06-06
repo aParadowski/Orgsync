@@ -12,7 +12,7 @@ function passInData(firstN, lastN, status) {
 
 	xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("POST", "/member/save", false);
-	xmlhttp.send("lastN&firstN&status");
+	xmlhttp.send(lastN +"&" + firstN + "&" +status);
 	
 	
 	$("#personTable").prepend($('<tr>').append($('<td>').append(lastN + ", " + firstN)).append($('<td>').append(status)));
